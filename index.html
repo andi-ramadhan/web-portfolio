@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Andi Ramadhan</title>
 
-  <link rel="stylesheet" href="css/app.css" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
 
   <!-- Google fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,35 +25,51 @@
   />
 </head>
 <body>
-  <header>
-    <!-- would be filled with navigation bar and header portfolio -->
-    <!-- drop down nav menu when people open it on smartphone -->
+  <header class="site-header">
+    <div class="header content">
+      <div class="profile-info">
+        <h1>Andi Ramadhan</h1>
+        <h2>Freelance Digital Illustrator</h2>
+      </div>
 
-    <h1>Andi Ramadhan</h1>
-    <h3>Freelance Digital Illustrator</h3>
-
-    <nav class="nav-list">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <!-- card style gallery content -->
-    <div id="content">
-      <div class="card" data-info="Art 1 info">Art 1</div>
-      <div class="card" data-info="Art 2 info">Art 2</div>
-      <div class="card" data-info="Art 3 info">Art 3</div>
+      <nav class="main-navigation">
+        <button class="menu-toggle" aria-label="Toggle menu">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-list">
+          <li><a href="#" class="nav-item" data-page="home">Home</a></li>
+          <li><a href="#" class="nav-item" data-page="about">About</a></li>
+          <li><a href="#" class="nav-item" data-page="contact">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-    <aside id="art-info">
-      <article>
+  </header>
+
+  <main class="main-content">
+    <section id="gallery" class="gallery-section">
+      <!-- loaded via js -->
+    </section>
+    
+    <aside id="artist-info" class="info-panel">
+      <button class="close-panel" area-label="Close panel">
+        <i class="fas fa-times"></i>
+      </button>
+      <article class="info-content">
+        <!-- about/art info loaded via js-->
       </article>
     </aside>
   </main>
-  <footer>
-    <!-- would be filled with copyright and my contact-->
+
+  <footer class="site-footer">
+     <div class="footer-content">
+      <div class="social-links">
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
+      </div>
+      <p class="copyright">&copy; 2024 Andi Ramadhan. All rights reserved.</p>
+     </div>
   </footer>
+  <script src="/assets/js/app.js"></script>
 </body>
 </html>
