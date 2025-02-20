@@ -1,103 +1,105 @@
-/* Base */
-
-:root {
-  --primary-color: #333;
-  --secondary-color: #666;
-  --accent-color: #4a90e2;
-  --background-color: #fff;
-  --header-height: 80px;
-}
-
-* {
+*, *::before, *::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
+/* Base styles */
 body {
   font-family: 'Nunito', sans-serif;
-  line-height: 1.6;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #0F0F0F;
 }
 
-/* Header */
-.site-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: var(--background-color);
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  z-index: 1000;
-}
-
+/* Header styles */
 .header-content {
+  font-family: 'Lexend', sans-serif;
+  width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
+  margin-inline: auto;
   padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 999;
 }
 
-.profile-info h1 {
-  font-family: 'Lexend', sans-serif;
-  font-size: 1.5rem;
-  color: var(--primary-color);
-}
-
-.profile-info h2 {
-  font-size: 1rem;
-  color: var(--secondary-color);
-}
-
-/* Navigation */
-.main-navigation .nav-list {
+.header-info {
   display: flex;
-  list-style: none;
-  gap: 2rem;
+  align-items: baseline;
+  gap: 1rem;
+  color: whitesmoke;
 }
 
-.nav-item {
+.header-info h1 {
+  font-size: 2rem;
+  font-style: oblique;
+}
+
+.header-info h3 {
+  font-size: 1.2rem;
+  color: #888;
+}
+
+/* Nav styles */
+.nav-list {
+  display: flex;
+  gap: 2rem;
+  list-style-type: none;
+}
+
+.nav-list li a {
+  font-size: 1.25rem;
   text-decoration: none;
-  color: var(--primary-color);
-  font-weight: 500;
+  color: #888;
   transition: color 0.3s ease;
 }
 
-.nav-item:hover {
-  color: var(--accent-color);
+.nav-list li a:hover {
+  color: white;
 }
 
-/* Main */
-.main-content {
-  margin-top: var(--header-height);
-  padding: 2rem;
-  min-height: calc(100vh - var(--header-height));
-  display: flex;
-}
-
-.gallery-section {
-  flex: 1;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 2rem;
-  padding: 1rem;
-}
-
-/* Aside */
-.info-panel {
+/* Aside panel */
+#about-info {
   position: fixed;
-  right: -400px;
-  top: var(--header-height);
+  top: 0;
+  right: -100%;
   width: 400px;
-  height: calc(100vh - var(--header-height));
-  background: var(--background-color);
-  box-shadow: -2px 0 5px rgba(0,0,0,0.1);
-  transition: right 0.3s ease;
+  height: 100vh;
+  background-color: white;
   padding: 2rem;
+  transition: right 0.3s ease-in-out;
+  overflow-y: auto;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.3);
+  z-index: 1000;
 }
 
-.info-panel.active {
+#about-info.active {
   right: 0;
+}
+
+.about-profile {
+  color: whitesmoke;
+  margin-bottom: 2rem;
+}
+
+.about-profile h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: whitesmoke;
+}
+
+.about-profile p {
+  color: #888;
+  line-height: 1.1rem;
+}
+
+.about-detail {
+  color: #DDD;
+  line-height: 1.6rem;
 }
 
 .close-panel {
@@ -106,70 +108,18 @@ body {
   right: 1rem;
   background: none;
   border: none;
+  color: #888;
   font-size: 1.5rem;
   cursor: pointer;
-  color: var(--secondary-color);
-}
-
-/* Footer */
-.site-footer {
-  background: var(--primary-color);
-  color: var(--background-color);
-  padding: 2rem;
-}
-
-.footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.social-links {
-  margin-bottom: 1rem;
-}
-
-.social-links a {
-  color: var(--background-color);
-  font-size: 1.5rem;
-  margin: 0 1rem;
   transition: color 0.3s ease;
 }
 
-.social-links a:hover {
-  color: var(--accent-color);
-}
-
-/* Responsive toggle menu */
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
+.color-panel:hover {
+  color: white;
 }
 
 @media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-list {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
+  .about-info {
     width: 100%;
-    background: var(--background-color);
-    padding: 1rem;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  }
-
-  .nav-list.active {
-    display: block;
-  }
-
-  .info-panel {
-    width: 100%;
-    right: -100%;
   }
 }

@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Andi Ramadhan</title>
+  <title>Webfolio</title>
 
-  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
 
   <!-- Google fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,51 +25,63 @@
   />
 </head>
 <body>
-  <header class="site-header">
-    <div class="header content">
-      <div class="profile-info">
+  <header>
+    <div class="header-content">
+      <div class="header-info">
         <h1>Andi Ramadhan</h1>
-        <h2>Freelance Digital Illustrator</h2>
+        <h3>Growth Developer</h3>
       </div>
 
-      <nav class="main-navigation">
-        <button class="menu-toggle" aria-label="Toggle menu">
-          <i class="fas fa-bars"></i>
-        </button>
+      <nav>
         <ul class="nav-list">
-          <li><a href="#" class="nav-item" data-page="home">Home</a></li>
-          <li><a href="#" class="nav-item" data-page="about">About</a></li>
-          <li><a href="#" class="nav-item" data-page="contact">Contact</a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#" id="about-trigger">About</a></li>
+          <li><a href="#">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main class="main-content">
-    <section id="gallery" class="gallery-section">
-      <!-- loaded via js -->
+    <section class="">
     </section>
-    
-    <aside id="artist-info" class="info-panel">
-      <button class="close-panel" area-label="Close panel">
+
+    <aside id="about-info">
+      <button class="close-panel" aria-label="Close panel">
         <i class="fas fa-times"></i>
       </button>
-      <article class="info-content">
-        <!-- about/art info loaded via js-->
+      <article class="about-profile">
+        <h2>Andi Ramadhan</h2>
+        <p>Freelance Digital Illustrator</p>
+        <figure>
+          <img src="#" />
+        </figure>
       </article>
+
+      <section class="about-detail">
+        <p>
+          Lorem ipsum odor amet, consectetuer adipiscing elit.
+          Morbi pellentesque purus orci erat habitasse dignissim,
+          cras nascetur. Non et condimentum taciti montes pharetra donec.
+          Lacinia ex parturient sollicitudin diam aliquam ornare penatibus.
+          Mi tincidunt mauris etiam aptent etiam viverra.
+          Magnis elit torquent semper platea condimentum.
+        </p>
+      </section>
     </aside>
   </main>
 
   <footer class="site-footer">
      <div class="footer-content">
       <div class="social-links">
-        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-        <a href="#" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
       </div>
       <p class="copyright">&copy; 2024 Andi Ramadhan. All rights reserved.</p>
      </div>
   </footer>
-  <script src="/assets/js/app.js"></script>
+  <script src="assets/js/app.js"></script>
 </body>
 </html>
